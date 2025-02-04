@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { baseUrl } from '../constant/url';
 
 export const PrivateRouter = () => {
-    const { data: authUser, isLoading, error } = useQuery({
+    const { data: authUser, isLoading, error } = useQuery({ //
         queryKey: ["authUser"],
         queryFn: async () => {
             const res = await fetch(`${baseUrl}/get`, {
